@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nuestros Momentos 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('fondo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #ff69b4;
+      text-shadow: 1px 1px 3px #fff;
+    }
+
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .foto {
+      cursor: pointer;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .foto:hover {
+      transform: scale(1.05);
+    }
+
+    .foto img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .boton-musica {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+      z-index: 999;
+    }
+
+    .boton-musica:hover {
+      background-color: #ff85c1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nuestros 11 Meses Juntos 💕</h1>
+
+  <!-- BOTÓN DE MÚSICA -->
+  <button class="boton-musica" onclick="document.getElementById('miAudio').play()">
+    Mis sentimientos 💗
+  </button>
+
+  <!-- AUDIO -->
+  <audio id="miAudio" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- GALERÍA DE FOTOS -->
+  <div class="contenedor">
+    <!-- Reemplaza las imágenes por tus archivos reales -->
+    <div class="foto" onclick="mostrarMensaje('julio')"><img src="julio.jpg" alt="Julio"></div>
+    <div class="foto" onclick="mostrarMensaje('agosto')"><img src="agosto.jpg" alt="Agosto"></div>
+    <div class="foto" onclick="mostrarMensaje('septiembre')"><img src="septiembre.jpg" alt="Septiembre"></div>
+    <div class="foto" onclick="mostrarMensaje('octubre')"><img src="octubre.jpg" alt="Octubre"></div>
+    <div class="foto" onclick="mostrarMensaje('noviembre')"><img src="noviembre.jpg" alt="Noviembre"></div>
+    <div class="foto" onclick="mostrarMensaje('diciembre')"><img src="diciembre.jpg" alt="Diciembre"></div>
+    <div class="foto" onclick="mostrarMensaje('enero')"><img src="enero.jpg" alt="Enero"></div>
+    <div class="foto" onclick="mostrarMensaje('febrero')"><img src="febrero.jpg" alt="Febrero"></div>
+    <div class="foto" onclick="mostrarMensaje('marzo')"><img src="marzo.jpg" alt="Marzo"></div>
+    <div class="foto" onclick="mostrarMensaje('abril')"><img src="abril.jpg" alt="Abril"></div>
+    <div class="foto" onclick="mostrarMensaje('mayo')"><img src="mayo.jpg" alt="Mayo"></div>
+    <div class="foto" onclick="mostrarMensaje('junio')"><img src="junio.jpg" alt="Junio"></div>
+  </div>
+
+  <script>
+    function mostrarMensaje(mes) {
+      const mensajes = {
+        julio: "JUNIO-JULIO: Una foto que yo se que esta foto no es de julio como tal, fue la primera pequeña cosa que tengo tuya un fragmento de un video en el que pisaste la linea, pero vi a una niña tan emocionaba porque ella le daba miedo sacar y pudo hacerlo, ver a esa niña contenta me hace desear seguir todos los dias por seguir e intentar hacerte sonreir con esa sonrisa tan linda mi niña, un comienzo para nuestro camino🥰",
+        agosto: "AGOSTO: Fue el primer cumpleaños que vivimos en nuestra relacion y fue el tuyo, aunque yo se que el regalo no fue el mejor posible porque en esos momentos no nos conociamos tan bien como ahora, por lo menos te di una cosa que creo que ha sido de las bases mas importantes en nuestra relacion y es la osita, una pequeña demostracion de mi amor hacia ti que espero te deje una marca por el resto de tu vida corazon☺ ",
+        septiembre: "SEPTIEMBRE: Fue el primer mes en que me enviaste una foto tuya, una pequeña demostracion que aunque puede ser que para ti no sea nada mi amor, a mi me parece algo tan hermoso que me envies una foto o que haya construido una confianza tan grande contigo que lo hagas, me parece una manera en la que demuestras el amor muy hermoso, no solo eso sino que este mes comenzamos a compartir fondo de pantalla y era el de lego que es muy hermoso, aunque no esten en la recopilacion tambien nos tomamos unas fotos juntos muy hermosas la cual una de ellas aun yo la tengo de foto de perfil😚",
+        octubre: "OCTUBRE: El primer halloween juntos mi niña, el primer festival, este mes ya empezamos a hacer fiestas o tradiciones junto al otro mi amor, este mes tu me hiciste una demostracion de amor tan linda que fue llevarme al festival del terror junto a ti fue una experiencia maravillosa en la que tenemos recuerdos inolvidables como los sustos que nos pegamos los dos, no solo eso sino que fue la primera salida de haloween que hacia con alguien que no fuera mi familia, tambien me disfrace despues de mucho tiempo, dejandonos demostrar lo hermoso que fue pedir dulces aunque ya estemos grandes a tu lado mi niña hermosa🎃",
+        noviembre: "NOVIEMBRE: El primer viaje que tuvimos juntos, un viaje hermoso en el que a mi me daba pena que me vieras con el pelo todo mojado en la cara y sin gafas, viendome tan raro, pero reaccionaste normal y ya de ahi para adelante del viaje no me dio pena nada mas, pudimos disfrutar de lanzarnos de toboganes todo el dia tan hermosamente, reirnos de las caras raras que haciamos, haciendolo asi un momento inolvidable🤽‍",
+        diciembre: "DICIEMBRE: Este mes fueron las primeras fiestas a tu lado, una experiencia inolvdable que me hubiera encantado que hubieran sido todos los tres dias pero solo fue un dia, que aunque hubiera sido uno fue muy especial poder pasar este al lado tuyo uy hacer cosas que nunca habia hecho, como regalarle algo a otra persona que no sea de mi familia, y aunque tambien tuvimos nuestras peleas a finales de año, pudimos superarlas y estar ahorita cumpliendo 11 meses🎉",
+        enero: "ENERO: Comenzamos el año un poco bravos con unos dias de peleas pero aun asi todo eso no nos vencio y lo pudimos superar juntos como haremos todo el uno con el otro, con el tiempo contado pude llegar para ir al cumpleaños de baron y junto a tu lado pasarla de una manera increible y una experiencia hermosa ayudandote a darle un gran regalo como lo es una fiesta a tu amigo, me encanto poder estar contigo todo ese dia y ayudarte a prepararle todo para que quedara perfecto🎆",
+        febrero: "FEBRERO: Me acuerdo que este mes estuviste un poco bajoniada, fue muy lindo intentar ayudarte estos meses y sacarte tan bella sonrisas, no solo eso sino que tambien te lleve a comer como san valentin que fue la primera vez que le di importancia a esta fecha porque no podia dejarla pasar como un dia normal a tu lado, me encanto poder darte a probar las hamburguesas del corral y que te hayan encantado mi niña🍔",
+        marzo: "MARZO: Fue nuestras primeras clsases de pre-icfes en las que estabamos aprendiendo a tomar la ruta, aprendiendo a como circular por esos lugares y explorando esas calles a tu lado, me acuerdo que ese mes no tenia demasiado dinero para la salida entonces por eso te lleve a goyurt pero tenia el miedo de que fuera algo muy sencillo, gracias a Dios tengo la mejor mujer del mundo que lo unico que le importa es que la experiencia sea a mi lado y no que sea, comenzamos a compartir outfit con la camiseta de colombia que compramos para poder combinar y vernos lo mas de lindos con la misma ropa con una idea que fue casi que momentanea pudimos conseguir comprarla aunque con sus dificultades presumiendo nuestra camisa hermosa los dos 🎀 ",
+        abril: "ABRIL: Hicimos nuestra foto animada al estilo ghibli la mas de hermosa los dos junticos de manera animada y bonita, tambien tuvimos algunas peleas por mi culpa lo cual aun lo lamento con mi vida, que pudimos superar en nuestra relacion y avanzar, uno de los primeros dias que comenzamos a vivir la experiencia de estar en un lugar alejado los dos juntos mi niña y explorar las nuevas experiencias que esto nos brindaba🤩",
+        mayo: "MAYO: Fue un mes lleno de nuevos recuerdos junto a ti, me hiciste el cumpleaños mas especial de mi vida no solo con estar a mi lado, sino que tambien dandome los mejores regalos haciendome saber que me escuchas y que me amas, decorandome el cuarto dandole mas brillo a este dia que antes era apagado y al que yo no le daba importancia y aqui a tu lado le doy gracias a Dios porque se que van a ser los mejores cumpleaños cada uno superando al otro por tu bello amor ❤",
+        junio: "JUNIO: Otra vez estamos en este mes que ya practicamente llevamos un año estando al lado del otro pero no formalizado, ya un año desde que mi cabeza me comenzo a taladrar con el pensamiento de tener algo con una persona tan especial como lo eres tu, un poema que se seguira escribiendo hasta el final de nuestras vidas o eso espero, una historia que se seguira contando, una bella historia romantica a tu lado, cada dia que pasamso puede que tenga problemas y no le veamos solucion pero aun asi nosotros sabemos que podremos superarlo juntos, con este pequeño regalo espero darte a demostrar que aunque parezca poco tiempo lo que llevamos, son experiencias las que cuentan esta historia mucho mas que el tiempo, aunque tambien espero que ese tiempo a tu lado sea ahora y siempre hasta el final de mi existencia, Te amo con toda mi alma mi niña hermosa💗💗💗"
+      };
+
+      alert(mensajes[mes] || "¡Un momento especial!");
+    }
+  </script>
+
+</body>
+</html>
